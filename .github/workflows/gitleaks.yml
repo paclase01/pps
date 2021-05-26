@@ -9,5 +9,5 @@ jobs:
     - uses: actions/checkout@v1
     - name: pps
       uses: paclase01/pps@master
-        with:
-          config-path: .gitleaks.yml
+      with:
+       config-path: .gitleaks.yml

@@ -7,4 +7,5 @@ LABEL "com.github.actions.color"="purple"
 LABEL "repository"="https://github.com/zricethezav/gitleaks-action"
 
 ADD entrypoint.sh /entrypoint.sh
+RUN ["chmod", "+x", "/entrypoint.sh"]
 ENTRYPOINT ["/entrypoint.sh"]

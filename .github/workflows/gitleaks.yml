@@ -1,13 +1,16 @@
+  
 name: gitleaks
 
-on: [push,pull_request]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   gitleaks:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: pps
-      uses: paclase01/pps@master
-      with:
-       config-path: .gitleaks.yml
+      - uses: actions/checkout@v1
+      - name: gitleaks-action with defaults
+        uses: zricethezav/gitleaks-action@master
+      - name: gitleaks-action with config
+        uses: paclase01/pps@master
+        with:
+          config-path: .gitleaks.yml
